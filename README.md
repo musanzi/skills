@@ -24,7 +24,7 @@ The stack these skills assume is NestJS on the backend and Angular on the fronte
 
 3. Restart Claude Code. The skills appear without a prefix, such as `/grilling` and `/workflow`.
 
-4. In each project, run `/setup-skills` once. It records the issue tracker and the location of the domain docs that the other skills read.
+4. In each project, run `/setup-skills` once. It records the issue tracker, the triage labels, and the location of the domain docs that the other skills read.
 
 To update the skills on another machine, run `git pull` in `~/.agents/skills`. The links pick up the change.
 
@@ -65,6 +65,7 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 | `grill-me` | manual | Interviews you about a plan or design, and saves nothing. |
 | `grill-with-docs` | manual | Interviews you about a plan in a repo, and updates `GLOSSARY.md` and the ADRs as it goes. |
 | `wayfinder` | manual | Plans work too large for one session as a map of decision tickets on the tracker. |
+| `to-questionnaire` | manual | Writes a questionnaire for someone else when they hold the answer you need. |
 | `research` | auto | Reads primary sources in the background and saves cited findings as a Markdown file. |
 | `prototype` | auto | Builds throwaway code to answer one design question. |
 
@@ -74,7 +75,8 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 | --- | --- | --- |
 | `to-spec` | manual | Turns the current conversation into a spec on the issue tracker. |
 | `to-tickets` | manual | Splits a spec into tickets, each listing the tickets that block it. |
-| `setup-skills` | manual | Configures a repo's issue tracker and domain docs for the other skills. |
+| `triage` | manual | Moves incoming issues and pull requests through triage labels and writes briefs an agent can act on. |
+| `setup-skills` | manual | Configures a repo's issue tracker, triage labels, and domain docs for the other skills. |
 
 ### Build
 
