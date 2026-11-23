@@ -120,6 +120,7 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 | Skill | Runs | What it does |
 | --- | --- | --- |
 | `writing-for-agents` | auto | Covers how to write skills, `AGENTS.md`, and `CLAUDE.md`. |
+| `interview` | manual | Interviews you one question at a time, then writes an article from your answers. |
 | `technical-writing` | manual | Applies a technical-writing standard to docs, pull requests, and commits. |
 | `unslop` | manual | Removes AI writing patterns from prose. |
 
