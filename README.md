@@ -129,7 +129,7 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 
 | Skill | Runs | What it does |
 | --- | --- | --- |
-| `git-guardrails-claude-code` | auto | Adds Claude Code hooks that block destructive git commands. |
+| `git-guardrails` | auto | Adds Claude Code hooks that block destructive git commands. |
 | `setup-pre-commit` | auto | Adds Husky pre-commit hooks for formatting, type checks, and tests. |
 | `find-skills` | auto | Finds and installs skills from the open skills ecosystem. |
 
