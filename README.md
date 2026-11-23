@@ -113,7 +113,7 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 
 | Skill | Runs | What it does |
 | --- | --- | --- |
-| `improve-codebase-architecture` | manual | Finds modules worth making deeper and reports them as an HTML page. |
+| `architect-codebase` | manual | Finds modules worth making deeper and reports them as an HTML page. |
 | `codebase-design` | auto | Defines the words used to design modules: interface, depth, seam, and adapter. |
 | `domain-modeling` | auto | Keeps `GLOSSARY.md` and the ADRs accurate. |
 
