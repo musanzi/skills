@@ -61,8 +61,7 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 | Skill | Runs | What it does |
 | --- | --- | --- |
 | `workflow` | manual | Says which skill fits the situation and lists the stack skills to load. |
-| `grilling` | auto | The interview loop that the other grilling skills build on: questions in rounds, each with a recommended answer. |
-| `grill-me` | manual | Interviews you about a plan or design, and saves nothing. |
+| `grilling` | auto | Interviews you about a plan or design in rounds, each question with a recommended answer, and saves nothing. |
 | `grill-with-docs` | manual | Interviews you about a plan in a repo, and updates `GLOSSARY.md` and the ADRs as it goes. |
 | `wayfinder` | manual | Plans work too large for one session as a map of decision tickets on the tracker. |
 | `to-questionnaire` | manual | Writes a questionnaire for someone else when they hold the answer you need. |
