@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: spec-review
 description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
 ---
 
@@ -10,7 +10,7 @@ Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
 
 Both axes run as **parallel sub-agents** so they don't pollute each other's context, then this skill aggregates their findings. Start every sub-agent with a fresh context window.
 
-The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+The issue tracker should have been provided to you. If not, tell the user to run `/setup-skills`.
 
 ## Process
 
@@ -34,6 +34,13 @@ Look for the originating spec, in this order:
 ### 3. Identify the standards sources
 
 Search the repo for every file that documents how code should be written. When `CODING_STANDARDS.md` or `CONTRIBUTING.md` exists, it must be on the list.
+
+The user's global rules come first on that list and are hard violations, never judgement calls:
+
+- No comments in code: no line, block, JSDoc, HTML, or style comments. Only tool directives such as `// eslint-disable-next-line`, `// @ts-expect-error`, and `<!-- prettier-ignore -->` are allowed. Generated code is exempt.
+- One CQRS class per file: every command handler, query handler, event handler, command, query, and event gets its own file named after the class, such as `create-stand.handler.ts` and `create-stand.command.ts`.
+
+Read `~/.claude/CLAUDE.md` as well, in case these rules have changed.
 
 On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below: a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
 
