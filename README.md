@@ -117,13 +117,10 @@ A skill marked **manual** runs only when you type its name. Claude starts the ot
 | `codebase-design` | auto | Defines the words used to design modules: interface, depth, seam, and adapter. |
 | `domain-modeling` | auto | Keeps `GLOSSARY.md` and the ADRs accurate. |
 
-### Session and writing
+### Writing
 
 | Skill | Runs | What it does |
 | --- | --- | --- |
-| `handoff` | manual | Writes the current conversation to a file another agent can pick up. |
-| `wait-what` | manual | Explains the last message again, in plain words. |
-| `teach` | manual | Teaches a concept over several sessions, using the current directory to track progress. |
 | `writing-for-agents` | auto | Covers how to write skills, `AGENTS.md`, and `CLAUDE.md`. |
 | `technical-writing` | manual | Applies a technical-writing standard to docs, pull requests, and commits. |
 | `unslop` | manual | Removes AI writing patterns from prose. |
